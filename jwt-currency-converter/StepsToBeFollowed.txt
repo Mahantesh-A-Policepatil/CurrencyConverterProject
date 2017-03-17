@@ -1,0 +1,39 @@
+Steps to be followed to test the web application
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Create a Database with name "currency-converter-db" in phpmyadmin or mysql
+Please Note : make appropriate changes in .env file and in config/database.php i.e provide "database", "username" and "password"
+after this step execute following mysql query
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `api_token`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Mahantesh', 'mahantesh_policepatil@yahoo.in', '$2y$10$CUCuK6C6BxPaHEnlGV5EIeNB.nT8GihDP8FnQY9SW52ux3KEyG2T2', '3MRgs1JXlTzAZtgb4gpwr7BKo0gaoLMaZxVYzT1b69T1dci5KXu53gJL3ZP2', NULL, '2017-03-15 09:05:08', '2017-03-15 09:05:08'),
+(2, 'manav', 'manav.gupta@daytonatec.com', '$2y$10$7gGMdFF3ckH5mqQ4qSRZ8e940ttKURa4NJfvefdsHeDYBSNi9KYyu', 'uRgWzxuHX7TESctqFoSlqgKc34wTA6Yqukm0X1p6wCPAujd7CjzlU2TXyWNY', NULL, '2017-03-16 03:30:42', '2017-03-16 03:30:42');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Unzip the project folder and place it in C:\xampp\htdocs
+3. Start the Apache and MySQL in XAMP Control Panel
+4. From the command prompt run the following command 
+	cd C:\xampp\htdocs\jwt-currency-converter
+5. 	From the command prompt run the following command 
+	php artisan serve --port=8000
+6. Now from the post man run the following POST API
+   http://localhost:8000/api/login
+   use following credentials in post man's form-data
+   email    : manav.gupta@daytonatec.com
+   password : magic
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   The above API will give the following response
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   {
+	  "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9hcGlcL2xvZ2luIiwiaWF0IjoxNDg5NjU2MDUwLCJleHAiOjE0ODk2NTk2NTAsIm5iZiI6MTQ4OTY1NjA1MCwianRpIjoiMzZjZTgwNmY3ZWE3OGIxMDUwZWZmZjgwNjA4NjQxMzEifQ.kGTu9-QLhp2Kk2cffcYmOEW9db-SvXkRBG2e6p96ZGc",
+	  "data": {
+		"id": 2,
+		"name": "manav",
+		"email": "manav.gupta@daytonatec.com",
+		"api_token": "uRgWzxuHX7TESctqFoSlqgKc34wTA6Yqukm0X1p6wCPAujd7CjzlU2TXyWNY",
+		"created_at": "2017-03-16 09:00:42",
+		"updated_at": "2017-03-16 09:00:42"
+	  }
+	}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	

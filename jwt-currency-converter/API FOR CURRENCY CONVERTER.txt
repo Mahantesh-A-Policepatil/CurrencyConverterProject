@@ -1,0 +1,37 @@
+1.Login API
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Following API is for Login (Following API is a POST API)
+http://localhost:8000/api/login
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2.Logout API
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Following API is for Logout (Following API is a POST API)
+http://localhost:8000/api/v1/logout?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9sb2dpbiIsImlhdCI6MTQ4OTY1NDIyOSwiZXhwIjoxNDg5NjU3ODI5LCJuYmYiOjE0ODk2NTQyMjksImp0aSI6ImRhOTdmMzJjNTNlMGJhODI1OGZjNmVkMDM4MGI1NTFhIn0.n3Ja0VZWs2Orl5cE7vYn0d5kjMCDRFEjj5LNch5WUl0
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.Register API (Following API is a GET API)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+http://localhost:8000/api/register_user
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Currency Management Screen
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.Create a New Currency
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Following is the API for Creating a New Currency (Following API is a POST API)
+http://localhost:8000/api/v1/create_currency?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9sb2dpbiIsImlhdCI6MTQ4OTY1MDM0MSwiZXhwIjoxNDg5NjUzOTQxLCJuYmYiOjE0ODk2NTAzNDEsImp0aSI6IjQ4NDc0MzMyNjQzZTM4NDMzOWVjZTRlZjJlOGE2NGQ2In0.DLtOKvvuqHbCpo_XbJSLacN9SygbwpCJPf38dsxlb38
+
+In order to execute the above API in POSTMAN we need to provide following paramenters along with the API
+currency_code
+country
+currency_name
+convertion_rate
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. Display a list of All Currencies (Following API is a GET API)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Following is the API for listing all currency details
+show_currency_list
+http://localhost:8000/api/v1/show_currency_list?token=
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. Currency Convertion Screen (Following API is a GET API)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+http://localhost:8000/api/v1/convert_currency/amount/1/from/USD/to/EUR?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2xvY2FsaG9zdDo4MDAwXC9sb2dpbiIsImlhdCI6MTQ4OTY1MDM0MSwiZXhwIjoxNDg5NjUzOTQxLCJuYmYiOjE0ODk2NTAzNDEsImp0aSI6IjQ4NDc0MzMyNjQzZTM4NDMzOWVjZTRlZjJlOGE2NGQ2In0.DLtOKvvuqHbCpo_XbJSLacN9SygbwpCJPf38dsxlb38
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
